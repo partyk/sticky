@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<style>
+    body {
+        margin:0; padding:0;
+    }
+    #main {
+        margin: 0 auto;
+        min-width:640px;
+        max-width:1000px;
+        padding-top: 30px;
+    }
+    .col-a {
+        float:left;
+        width: 58%;
+    }
+
+    .col-b {
+        float: right;
+        width: 40%;
+    }
+
+    .col-a--reverse {
+         width: 40%;
+    }
+
+    .col-a--reverse {
+        width: 58%;
+    }
+
+    .fc0 {
+        clear: both;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+    }
+
+    .sticky {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+        background-color: crimson;
+        transition: top 0.4s ease 0s;
+    }
+    .sticky2 {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+        background-color: blue;
+    }
+</style>
+<body>
+    <div id="main">
+        <div class="col-a" id="sticky-1-start">
+            <div style="height:2000px; background-color: bisque">
+                <div class="sticky" id="sticky1">
+                    Sticky 1
+                </div>
+            </div>
+            <div id="sticky-1-end"></div>
+        </div>
+        <div class="col-b">
+            <div style="height:1500px; margin-bottom:10px; background-color: chartreuse" id="sticky-2-start">
+                <div class="sticky sticky2" id="sticky2">
+                    Sticky 2
+                </div>
+            </div>
+            <div id="sticky-2-end"></div>
+            <div style="height:800px; background-color: aquamarine" id="sticky-3-start">
+                <div class="sticky" id="sticky3">
+                    Sticky 3
+                </div>
+            </div>
+            <div id="sticky-3-end"></div>
+        </div>
+        <div class="fc0" sticky="sticky-1-end" style="margin-bottom: 10px;"></div>
+        <h1>Mobile</h1>
+        <div style="height: 1200px; margin-bottom: 10px; background-color: aquamarine" id="sticky-4-start">
+            <div class="sticky" id="sticky4">
+                Sticky 4
+            </div>
+        </div>
+        <div id="sticky-4-end"></div>
+        <div style="height: 1200px; background-color: blanchedalmond" id="sticky-5-start">
+            <div class="sticky" id="sticky5">
+                Sticky 5
+            </div>
+        </div>
+        <div id="sticky-5-end"></div>
+    </div>
+    <script type="text/javascript" src="src/sticky.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</body>
+</html>

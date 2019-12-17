@@ -10,6 +10,7 @@ class Sticky {
             moveEnd: 0,
             classStart: 'sticky-start',
             classEnd: 'sticky-end',
+            inlineStyle: true,
             ...options
         };
         this.init();
@@ -51,6 +52,9 @@ class Sticky {
     }
 
     addInlineStyle() {
+        if (!this.options.inlineStyle) {
+            return;
+        }
         if (this.startActive) {
             this.addStyle({
                 width: this.stateElement.width,

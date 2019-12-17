@@ -1,1 +1,1 @@
-"# sticky" 
+# Sticky.js

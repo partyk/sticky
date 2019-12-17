@@ -7,7 +7,6 @@ class Sticky {
             end: null,
             stickTo: 'top',
             movePosition: 0,
-            moveStart: 0,
             moveEnd: 0,
             classStart: 'sticky-start',
             classEnd: 'sticky-end',
@@ -64,9 +63,13 @@ class Sticky {
 
                 // add element height
                 if (this.options.stickTo === 'bottom') {
+                    // moveEnd
+                    axisY = axisY + this.options.moveEnd;
                     axisY = (axisY - windowCoordinates.windowHeight);
                     this.element.style.marginBottom = axisY*(-1) + 'px';
                 } else {
+                    // moveEnd
+                    axisY = axisY + this.options.moveEnd;
                     axisY = (axisY - this.element.getBoundingClientRect().height);
                     axisY = axisY - this.options.movePosition;
                     this.element.style.marginTop = axisY + 'px';
@@ -103,7 +106,6 @@ class Sticky {
 
         // move position
         axisY = axisY - this.options.movePosition;
-        console.log(this.options.moveStart);
 
         if (this.options.stickTo === 'bottom') {
             // add element height
@@ -132,14 +134,15 @@ class Sticky {
 
         axisY = axisY - this.options.movePosition;
 
+        // moveEnd
+        axisY = axisY + this.options.moveEnd;
+
         if (this.options.stickTo === 'bottom') {
             // add window height
             axisY = axisY - windowCoordinates.windowHeight;
         } else {
             // add element height
             axisY = axisY - this.element.getBoundingClientRect().height;
-            // moveTop
-            axisY = axisY + this.options.moveStart;
         }
 
         if (axisY <= 0) {

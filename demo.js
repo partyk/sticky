@@ -6,12 +6,14 @@ new Sticky(document.querySelector('#sticky1'), {
 });
 new Sticky(document.querySelector('#sticky2'), {
     start: 'sticky-2-start',
-    end: 'sticky-2-end'
+    end: 'sticky-2-end',
+    moveEnd: -10
 });
 new Sticky(document.querySelector('#sticky3'), {
     start: 'sticky-3-start',
     end: 'sticky-3-end',
-    stickTo: 'bottom'
+    stickTo: 'bottom',
+    moveEnd: -10
 });
 
 new Sticky(document.querySelector('#sticky4'), {
@@ -21,5 +23,6 @@ new Sticky(document.querySelector('#sticky4'), {
 new Sticky(document.querySelector('#sticky5'), {
     start: 'sticky-5-start',
     end: 'sticky-5-end',
-    stickTo: 'bottom'
+    stickTo: 'bottom',
+    moveEnd: -20
 });
